@@ -26,32 +26,35 @@ class Matrix():
 			result += '\n'
 		return result
 
-	def __add__()
+	def __add__(self, other):
+		x_row = []
+		x = []
+		if len(self.inp_matrix[0]) != len(self.inp_matrix[0]):
+			raise #matrixs have different number of coulmns
+		if len(self.inp_matrix) != len(other.inp_matrix):
+			raise #matrixs have different number of rows
+		for i in range(len(self.inp_matrix)):
+			for j in range(len(self.inp_matrix[0])):
+				x_row.append(self.inp_matrix[i][j] + other.inp_matrix[i][j])
+			x.append(x_row.copy())
+			x_row.clear()
+		return Matrix(x)
+	
+a = [[3, 5, 32], [2, 4, 6],[-1, 64, -8], [-1, 64, -8]]
+b = [[1, 1, 1], [1, 2, 1],[0, -64, -8], [0, 0, 0]]
+c = [[3, 4, 6, 1, 2], [2, 3, 5, 1, 3]]
+d = [[3, 4, 6, 1, 2], [2, 3, 5, 1, 3]]
+mat_1 = Matrix(a)
+mat_2 = Matrix(b)
+mat_3 = Matrix(c)
+mat_4 = Matrix(d)
 
+print(str(mat_1))
+print(str(mat_2))
+print(str(mat_1 + mat_2))
+print(type(mat_1 + mat_2))
 
+print(str(mat_3))
+print(str(mat_4))
+print(str(mat_3 + mat_4))
 
-mat_1 = Matrix([[3, 5, 32], [2, 4, 6],[-1, 64, -8]])
-
-x = str(mat_1)
-print(x)
-
-
-
-
-		
-
-
-"""1. Реализовать класс Matrix (матрица). Обеспечить перегрузку конструктора класса (метод __init__()),
- который должен принимать данные (список списков) для формирования матрицы.
-Подсказка: матрица — система некоторых математических величин, расположенных 
-в виде прямоугольной схемы.
-Примеры матриц: 3 на 2, 3 на 3, 2 на 4.
-
-31    32         3    5    32        3    5    8    3
-37    43         2    4    6         8    3    7    1
-51    86        -1   64   -8
-Следующий шаг — реализовать перегрузку метода __str__() для вывода матрицы в привычном виде.
-Далее реализовать перегрузку метода __add__() для реализации операции сложения двух объектов
- класса Matrix (двух матриц). Результатом сложения должна быть новая матрица.
-Подсказка: сложение элементов матриц выполнять поэлементно — первый элемент первой строки 
-первой матрицы складываем с первым элементом первой строки второй матрицы и т.д."""
