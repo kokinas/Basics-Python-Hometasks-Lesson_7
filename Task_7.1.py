@@ -15,9 +15,7 @@ class Matrix():
 				pass
 			else:
 				raise #elemets of matrix are not int
-		
-
-
+	
 	def __str__(self):
 		result = ""
 		for row in self.inp_matrix:

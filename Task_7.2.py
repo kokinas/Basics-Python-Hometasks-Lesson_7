@@ -37,4 +37,5 @@ print(coat_1.name, coat_1.spend_raw())
 print(coat_2.name, coat_2.spend_raw())
 print(suit_5.spend_raw())
 print(coat_4.total_spend)
+print(Coat.__bases__)
 
